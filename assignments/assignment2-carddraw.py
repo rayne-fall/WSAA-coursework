@@ -22,7 +22,7 @@ third_card=draw['cards'][2]
 fourth_card=draw['cards'][3]
 fifth_card=draw['cards'][4]
 #print value and suit of each card
-print(first_card["value"],first_card["suit"],second_card["value"],second_card["suit"],third_card["value"],third_card["suit"],fourth_card["value"],fourth_card["suit"],fifth_card["value"],fifth_card["suit"])
+print(f"Your hand is: {first_card["value"]} of {first_card["suit"]}, {second_card["value"]} of {second_card["suit"]}, {third_card["value"]} of {third_card["suit"]}, {fourth_card["value"]} of {fourth_card["suit"]}, {fifth_card["value"]} of {fifth_card["suit"]}")
 card_values=[first_card["value"],second_card["value"],third_card["value"],fourth_card["value"],fifth_card["value"]]  
 # check if user's drawn five cards iif the same suit
 if first_card["suit"]==second_card["suit"]==third_card["suit"]==fourth_card["suit"]==fifth_card["suit"]:
