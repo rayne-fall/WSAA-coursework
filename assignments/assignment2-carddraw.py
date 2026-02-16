@@ -44,11 +44,17 @@ for k in range(len(card_values)):
     card_values[k]=13 if card_values[k]=="KING" else card_values[k]
 for l in range(len(card_values)):
     card_values[l]=1 if card_values[l]=="ACE" else card_values[l]
+# convert all card values to integers [4]
+c=[int(value) for value in card_values]
+# put card values in descending order [5]
+v=sorted(c,reverse=True)
 # check if user has drawn a straight
-for a,b,c,d,e in itertools.combinations(card_values, 5):
-    if a==(int(b)+1) and b==(int(c)+1) and c==(int(d)+1) and d==(int(e)+1):
+for a,b,c,d,e in itertools.combinations(v, 5):
+    if a==(b+1) and b==(c+1) and c==(d+1) and d==(e+1):
         print("Sweet! You drew a straight!")
 #References:
 #[1]https://www.geeksforgeeks.org/python/how-to-parse-nested-json-in-python/
 #[2]https://stackoverflow.com/questions/16603282/how-to-compare-each-item-in-a-list-with-the-rest-only-once
 #[3]https://stackoverflow.com/questions/44081148/python-replace-string-in-list-with-integer
+#[4]https://www.geeksforgeeks.org/python/python-converting-all-strings-in-list-to-integers/
+#[5]https://docs.python.org/3/library/functions.html#sorted
